@@ -10,6 +10,11 @@ body {
 
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
 .logo img.image {
     width: 75%;
 }
@@ -24,4 +29,18 @@ body {
 
 .logo:hover img.hover {
     display: block;
+}
+
+
+#snek {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@keyframes page {
+    animation: 2s ease 1s;
+    animation: translate(-40%, -30%) scale(.40, .40);
+    animation-fill-mode: forward;
 }
