@@ -2,3 +2,7 @@ body {
     background-color: black;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.nav-item::before {
+    display: none;
+}
