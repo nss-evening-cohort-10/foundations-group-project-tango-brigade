@@ -32,14 +32,8 @@ body {
 }
 
 
-#snek {
-    display: flex;
-    justify-content: center;
-}
 
-
-
-@keyframes page {
+@keyframes nextPage {
     animation: 2s ease 1s;
     animation: translate(-40%, -30%) scale(.40, .40);
     animation-fill-mode: forward;
