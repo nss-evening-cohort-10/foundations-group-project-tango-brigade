@@ -46,7 +46,7 @@ const tourDatePrinter = (tourArr) => {
             </div>
             <div class="col-4 venue">${tourArr[i].venue}</div>
             <div class="col-4 location">${tourArr[i].location}</div>
-            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" class="btn btn-primary">Buy Tickets</a></div>
+            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">Buy Tickets</a></div>
         </div>
         `
     }
