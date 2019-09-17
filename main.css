@@ -10,4 +10,18 @@ body {
 
 }
 
-.card
+.logo img.image {
+    width: 75%;
+}
+
+.logo:hover img.image {
+    display: none;
+}
+
+.logo img.hover {
+    display: none;
+}
+
+.logo:hover img.hover {
+    display: block;
+}
