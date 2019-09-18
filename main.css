@@ -2,12 +2,39 @@ body {
     background-color: black;
     font-family: 'Ubuntu', sans-serif;
     background: url(./images/background.jpg) no-repeat center center fixed;
-    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+/* footer code */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .wrapper {
+    min-height: 100%;
+  
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+  }
+  .footer,
+  .push {
+    height: 50px;
+  }
+
+.navbar-nav .nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    color: #57c9c3;
+}
+
+a .nav-link .active {
+    color: #cdff44;
+}
+
+/* STYLING FOR TOUR DATES */
 
 /* logo swap */
 .logo {
@@ -173,3 +200,4 @@ body {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
