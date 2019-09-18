@@ -47,6 +47,7 @@ body {
     transition: 2s ease 1s;
     transform: translate(30%, -30%) scale(.40, .40);
     animation-fill-mode: forwards;
+}
 
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
@@ -88,7 +89,7 @@ body {
     padding: 50px 0px 20px 0px;
 }
 
-/* STYLING FOR TOUR DATES */
+/* STYLING FOR TOUR PAGE */
 #tour-dates {
     margin: auto; 
     width: auto;
@@ -103,7 +104,7 @@ body {
 }
 
 .date-zone {
-    color: gainsboro;
+    color: white;
     background-color: #505050;
 }
 
@@ -122,6 +123,28 @@ body {
 .day {
     font-size: 3em;
     font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+#upcoming {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin-left: 3em;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+#show-more-message {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* TOUR DATE BUTTON */ 
