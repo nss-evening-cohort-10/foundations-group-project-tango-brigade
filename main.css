@@ -8,10 +8,52 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-/*ABOUT PAGE CSS */
+
+/* logo swap */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.logo img.image {
+    height: 200px;
+}
+
+.logo:hover img.image {
+    display: none;
+}
+
+.logo img.hover {
+    display: none;
+}
+
+.logo:hover img.hover {
+    display: block;
+
+}
+
+/* logo animation */
+
+.firstAnimation {
+    justify-content: left;
+    transition: 2s ease 1s;
+    transform: translate(-30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
+}
+
+.leftToRight {
+    justify-content: right;
+    transition: 2s ease 1s;
+    transform: translate(30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
+}
+
+/* ABOUT PAGE CSS */
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
-    margin: 100 px;
+    background-position: 50% 210px;
+    max-width: 100%;
     padding: 50px 50px;
     height: 550px; 
     filter: blur(3px);
@@ -22,6 +64,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .bg-text {
@@ -40,7 +83,7 @@ body {
     position: absolute;
     left: 37%;
     top: 25%;
-    margin-top: -100px;
+    margin-top: 200px;
     margin-left: -100px;
 }
 
@@ -48,46 +91,67 @@ body {
     margin: 10px 0x 8px 0px; 
     padding: 50px 0px 20px 0px;
 }
-
 .aboutBio{
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.719); /* Black w/opacity/see-through */
+    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
     color: white;
     margin: auto;
-    padding: 90px 250px;
-    text-align: justify;
-    text-justify: inter-word;
+    padding: 50px 200px;
+
 }
 .aboutH3{
     text-align: center;
-    color: #80dbd1; 
-}
-
-.aboutMembers{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(77, 192, 228, 0.719); /* Black w/opacity/see-through */
-}
-.aboutH2Members{
-    text-align: center;
-    color: white;
-    margin: auto;
-    padding: 50px;
-    font-size: 45px;
+    color: rgba(70, 195, 199);
 }
 .bg-image2{
-    
+    background-image: url("/images/starjetsAboutPageTitle2.jpg");
+    background-position: 50% 210px;
+    max-width: 100%;
+    padding: 50px 50px;
+    height: 200px; 
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+      
+        /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+#aboutMembersZone{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(70, 195, 199, 0.712); /* Black w/opacity/see-through */
+    color: white;
+    text-align: center;
+    display: flex;
+
+ 
+
+
+}
+.bandCard{
+    margin: 10px 20px 10px 20px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    background-color: black;
+    border: 3px white;
+    flex: 0 50%;
+    box-sizing:border-box
+    flex-wrap: wrap;
+}
+.bandCard img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-/* STYLING FOR TOUR DATES */
+/* STYLING FOR TOUR PAGE */
 #tour-dates {
     margin: auto; 
     width: auto;
@@ -103,7 +167,7 @@ body {
 }
 
 .date-zone {
-    color: gainsboro;
+    color: white;
     background-color: #505050;
 }
 
@@ -122,6 +186,28 @@ body {
 .day {
     font-size: 3em;
     font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+#upcoming {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin-left: 3em;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+#show-more-message {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* TOUR DATE BUTTON */ 
@@ -150,4 +236,3 @@ body {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
-}
