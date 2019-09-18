@@ -8,7 +8,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
+/*ABOUT PAGE CSS */
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
     margin: 100 px;
@@ -49,10 +49,49 @@ body {
     padding: 50px 0px 20px 0px;
 }
 
+.aboutBio{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.719); /* Black w/opacity/see-through */
+    color: white;
+    margin: auto;
+    padding: 90px 250px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.aboutH3{
+    text-align: center;
+    color: #80dbd1; 
+}
+
+.aboutMembers{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(77, 192, 228, 0.719); /* Black w/opacity/see-through */
+}
+.aboutH2Members{
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 50px;
+    font-size: 45px;
+}
+.bg-image2{
+    
+}
+
+
+
+
+
+
+
+
+
+
 /* STYLING FOR TOUR DATES */
 #tour-dates {
     margin: auto; 
     width: auto;
+
 }
 
 .tour {
