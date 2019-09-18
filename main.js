@@ -1,4 +1,6 @@
-console.log('holaaaa');
+
+const logo = document.getElementsByClassName('logo')[0];
+let currentPage = document.URL;
 
 // TOUR DATES ARRAYS
 tourDates = [
@@ -84,8 +86,6 @@ const tourDatePrinter = (tourArr) => {
     }
 };
 
-
-
 // MESSAGE TO SHOW WHEN BUTTON IS CLICKED
 const printMessage = () => {
     let showMoreMessageDivContent = document.getElementById('show-me-more').innerHTML;
@@ -101,10 +101,33 @@ const printMessage = () => {
 // SHOW MORE BUTTON EVENT LISTENER
 document.getElementById('show-more').addEventListener('click', printMessage);
 
+
+const checkPrev = () => {
+    if (document.referrer.includes('index.html')) {
+        logo.className += ' firstAnimation';
+    } else {
+        logo.className += ' leftToRight';
+    }
+}
+
+const pageCheck = () => {
+    if (currentPage.includes('tour.html')) {
+        tourDatePrinter(tourDates);
+        checkPrev();
+
+    } else if (currentPage.includes('index.html')) {
+        logo.className - ' firstAnimation';
+
+    } else if (currentPage.includes('about.html')) {
+        checkPrev();
+        
+    } else if (currentPage.includes('disc.html')) {
+        checkPrev();    
+    }
+}
+
 // INIT
 const init = () => {
-    if (document.URL.includes('tour')) {
-        tourDatePrinter(tourDates);
-    }
+    window.addEventListener('load', pageCheck);
 }
 init()
