@@ -7,16 +7,17 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
+/* logo swap */
 .logo {
     display: flex;
     justify-content: center;
+    margin: 2em;
 }
 
 .logo img.image {
-    width: 75%;
+    height: 200px;
 }
 
 .logo:hover img.image {
@@ -29,12 +30,84 @@ body {
 
 .logo:hover img.hover {
     display: block;
+
 }
 
+/* logo animation */
 
-
-@keyframes nextPage {
-    animation: 2s ease 1s;
-    animation: translate(-40%, -30%) scale(.40, .40);
-    animation-fill-mode: forward;
+.firstAnimation {
+    justify-content: left;
+    transition: 2s ease 1s;
+    transform: translate(-30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
 }
+
+.leftToRight {
+    justify-content: right;
+    transition: 2s ease 1s;
+    transform: translate(30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
+}
+
+/* STYLING FOR TOUR DATES */
+#tour-dates {
+    margin: auto; 
+    width: auto;
+}
+
+.tour {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 2px 2px black;
+}
+
+.date-zone {
+    color: gainsboro;
+    background-color: #505050;
+}
+
+.date-zone-row {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.month, .time {
+    font-size: 0.8em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.day {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* TOUR DATE BUTTON */ 
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #80d6d1;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #57c9c3;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
