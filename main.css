@@ -47,6 +47,23 @@ body {
     transition: 2s ease 1s;
     transform: translate(30%, -30%) scale(.40, .40);
     animation-fill-mode: forwards;
+}
+
+/* Carousel caption */
+
+.carousel-caption {
+    -webkit-text-stroke: -2px black;
+    color: #cdff44;
+    font-weight: bolder;
+    text-shadow: 2px 2px black;
+
+}
+
+.carousel {
+    width:640px;
+    height:360px;
+}
+
 
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
