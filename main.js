@@ -60,8 +60,6 @@ const checkPrev = () => {
         logo.className += ' firstAnimation';
     } else {
         logo.className += ' leftToRight';
-        // logo.className - ' firstAnimation';
-        // logo.className += ' leftToRight';
     }
 }
 
@@ -75,6 +73,7 @@ const pageCheck = () => {
 
     } else if (currentPage.includes('about.html')) {
         checkPrev();
+        
     } else if (currentPage.includes('disc.html')) {
         checkPrev();    
     }
