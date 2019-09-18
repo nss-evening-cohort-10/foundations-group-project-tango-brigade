@@ -9,3 +9,43 @@ body {
     background-size: cover;
 
 }
+.bg-image {
+    background-image: url("/images/starjetsAboutPageTitle2.jpg");
+    margin: 100 px;
+    padding: 50px 50px;
+    height: 550px; 
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+      
+        /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    font-family: futura-pt, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    top: 50%;
+    width: 600px;
+    height: 250px;
+    position: absolute;
+    left: 39%;
+    top: 25%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+h1 {
+    margin: 10px 0x 8px 0px; 
+    padding: 50px 0px 20px 0px;
+}
