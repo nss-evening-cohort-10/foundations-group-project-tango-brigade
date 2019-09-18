@@ -126,6 +126,10 @@ const pageCheck = () => {
     }
 }
 
+// EMAIL FORM
+
+
+
 // INIT
 const init = () => {
     window.addEventListener('load', pageCheck);

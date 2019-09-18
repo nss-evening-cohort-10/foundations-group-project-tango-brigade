@@ -30,7 +30,6 @@ body {
 
 .logo:hover img.hover {
     display: block;
-
 }
 
 /* logo animation */
@@ -173,3 +172,4 @@ body {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
