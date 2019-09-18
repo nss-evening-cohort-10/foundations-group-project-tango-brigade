@@ -2,7 +2,7 @@
 const logo = document.getElementsByClassName('logo')[0];
 let currentPage = document.URL;
 
-// TOUR DATES ARRAY
+// TOUR DATES ARRAYS
 tourDates = [
     {
         month: 'SEP',
@@ -23,6 +23,33 @@ tourDates = [
     {
         month: 'OCT',
         day: '8',
+        time: '6:00pm',
+        venue: 'The Station Inn',
+        location: 'Nashville, TN, USA',
+        linkToTickets: 'https://www.ticketmaster.com/',
+    },
+];
+
+moreTourDates = [
+    {
+        month: 'OCT',
+        day: '15',
+        time: '6:00pm',
+        venue: 'The Station Inn',
+        location: 'Nashville, TN, USA',
+        linkToTickets: 'https://www.ticketmaster.com/',
+    },
+    {
+        month: 'OCT',
+        day: '22',
+        time: '6:00pm',
+        venue: 'The Station Inn',
+        location: 'Nashville, TN, USA',
+        linkToTickets: 'https://www.ticketmaster.com/',
+    },
+    {
+        month: 'OCT',
+        day: '29',
         time: '6:00pm',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
@@ -52,8 +79,28 @@ const tourDatePrinter = (tourArr) => {
         </div>
         `
     }
-    printToDom('tour-dates', tourCard)
+    if (tourArr === tourDates) {
+        printToDom('tour-dates', tourCard)
+    } else if (tourArr === moreTourDates) {
+        printToDom('show-me-more', tourCard)
+    }
 };
+
+// MESSAGE TO SHOW WHEN BUTTON IS CLICKED
+const printMessage = () => {
+    let showMoreMessageDivContent = document.getElementById('show-me-more').innerHTML;
+    let removeSMButton = document.getElementById('SMButton');
+    if (showMoreMessageDivContent === '') {
+        tourDatePrinter(moreTourDates);
+        while (removeSMButton.hasChildNodes()) {
+            removeSMButton.removeChild(removeSMButton.firstChild);
+        }
+    }
+}
+
+// SHOW MORE BUTTON EVENT LISTENER
+document.getElementById('show-more').addEventListener('click', printMessage);
+
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -79,4 +126,8 @@ const pageCheck = () => {
     }
 }
 
-window.addEventListener('load', pageCheck);
+// INIT
+const init = () => {
+    window.addEventListener('load', pageCheck);
+}
+init()
