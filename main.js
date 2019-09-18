@@ -53,4 +53,29 @@ const tourDatePrinter = (tourArr) => {
     printToDom('tour-dates', tourCard)
 };
 
-tourDatePrinter(tourDates);
+
+
+// MESSAGE TO SHOW WHEN BUTTON IS CLICKED
+const printMessage = () => {
+    let showMoreMessageDivContent = document.getElementById('show-more-message').innerHTML;
+    let showMoreMessageDiv = document.getElementById('show-more-message');
+    if (showMoreMessageDivContent === '') {
+        let showMoreMessage = `NO UPCOMING SHOWS`
+        printToDom('show-more-message', showMoreMessage);
+    } else {
+        while (showMoreMessageDiv.hasChildNodes()) {
+            showMoreMessageDiv.removeChild(showMoreMessageDiv.firstChild);
+    }
+}
+}
+
+// SHOW MORE BUTTON EVENT LISTENER
+document.getElementById('show-more').addEventListener('click', printMessage);
+
+// INIT
+const init = () => {
+    if (document.URL.includes('tour')) {
+        tourDatePrinter(tourDates);
+    }
+}
+init()
