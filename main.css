@@ -8,11 +8,15 @@ body {
     background-size: cover;
 }
 
-.fab .fa-youtube.no-before::before {
-    display: none;
-    content: none;
-  }
-s
+.navbar-nav .nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    color: #57c9c3;
+}
+
+a .nav-link .active {
+    color: #cdff44;
+}
+
 /* STYLING FOR TOUR DATES */
 #tour-dates {
     margin: auto; 
