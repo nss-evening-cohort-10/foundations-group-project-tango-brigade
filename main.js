@@ -1,4 +1,6 @@
-console.log('holaaaa');
+
+const logo = document.getElementsByClassName('logo')[0];
+let currentPage = document.URL;
 
 // TOUR DATES ARRAY
 tourDates = [
@@ -53,4 +55,28 @@ const tourDatePrinter = (tourArr) => {
     printToDom('tour-dates', tourCard)
 };
 
-tourDatePrinter(tourDates);
+const checkPrev = () => {
+    if (document.referrer.includes('index.html')) {
+        logo.className += ' firstAnimation';
+    } else {
+        logo.className += ' leftToRight';
+    }
+}
+
+const pageCheck = () => {
+    if (currentPage.includes('tour.html')) {
+        tourDatePrinter(tourDates);
+        checkPrev();
+
+    } else if (currentPage.includes('index.html')) {
+        logo.className - ' firstAnimation';
+
+    } else if (currentPage.includes('about.html')) {
+        checkPrev();
+        
+    } else if (currentPage.includes('disc.html')) {
+        checkPrev();    
+    }
+}
+
+window.addEventListener('load', pageCheck);

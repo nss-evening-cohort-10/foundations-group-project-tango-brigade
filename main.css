@@ -9,6 +9,45 @@ body {
     background-size: cover;
 }
 
+/* logo swap */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.logo img.image {
+    height: 200px;
+}
+
+.logo:hover img.image {
+    display: none;
+}
+
+.logo img.hover {
+    display: none;
+}
+
+.logo:hover img.hover {
+    display: block;
+
+}
+
+/* logo animation */
+
+.firstAnimation {
+    justify-content: left;
+    transition: 2s ease 1s;
+    transform: translate(-30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
+}
+
+.leftToRight {
+    justify-content: right;
+    transition: 2s ease 1s;
+    transform: translate(30%, -30%) scale(.40, .40);
+    animation-fill-mode: forwards;
+
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
     margin: 100 px;
@@ -111,4 +150,3 @@ body {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
-}
