@@ -7,8 +7,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
+
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
     margin: 100 px;
@@ -22,9 +22,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-
 }
+
 .bg-text {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
@@ -48,4 +47,68 @@ body {
 .aboutH1 {
     margin: 10px 0x 8px 0px; 
     padding: 50px 0px 20px 0px;
+}
+
+/* STYLING FOR TOUR DATES */
+#tour-dates {
+    margin: auto; 
+    width: auto;
+}
+
+.tour {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 2px 2px black;
+}
+
+.date-zone {
+    color: gainsboro;
+    background-color: #505050;
+}
+
+.date-zone-row {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.month, .time {
+    font-size: 0.8em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.day {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* TOUR DATE BUTTON */ 
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #80d6d1;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #57c9c3;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
 }
