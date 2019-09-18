@@ -17,7 +17,7 @@ body {
 }
 
 .logo img.image {
-    height: 200px;
+    height: 100px;
 }
 
 .logo:hover img.image {
@@ -54,8 +54,8 @@ body {
 .carousel-caption {
     -webkit-text-stroke: -2px black;
     color: #cdff44;
-    font-weight: bolder;
     text-shadow: 2px 2px black;
+    font-family: Impact, Sans-serif;
 
 }
 
