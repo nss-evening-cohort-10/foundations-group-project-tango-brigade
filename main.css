@@ -44,7 +44,7 @@ a .nav-link .active {
 }
 
 .logo img.image {
-    height: 200px;
+    height: 100px;
 }
 
 .logo:hover img.image {
@@ -74,6 +74,21 @@ a .nav-link .active {
     transition: 2s ease 1s;
     transform: translate(30%, -30%) scale(.40, .40);
     animation-fill-mode: forwards;
+}
+
+/* Carousel caption */
+
+.carousel-caption {
+    -webkit-text-stroke: -2px black;
+    color: #cdff44;
+    text-shadow: 2px 2px black;
+    font-family: Impact, Sans-serif;
+
+}
+
+.carousel {
+    width:640px;
+    height:360px;
 }
 
 .bg-image {
