@@ -75,7 +75,7 @@ const tourDatePrinter = (tourArr) => {
             </div>
             <div class="col-4 venue">${tourArr[i].venue}</div>
             <div class="col-4 location">${tourArr[i].location}</div>
-            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">Buy Tickets</a></div>
+            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">BUY TICKETS</a></div>
         </div>
         `
     }
@@ -87,17 +87,47 @@ const tourDatePrinter = (tourArr) => {
 };
 
 // MESSAGE TO SHOW WHEN BUTTON IS CLICKED
+const printNewMessage = () => {
+    let removeEmailForm = document.getElementById('email-zone');
+    let newString = `
+    <div id="email-message">
+    <h2>THANK YOU FOR SUBSCRIBING!</h2>
+    <a href="/about.html" class="btn btn-primary">READ MORE</a>
+    </div>
+    `
+        while (removeEmailForm.hasChildNodes()) {
+            removeEmailForm.removeChild(removeEmailForm.firstChild);
+            console.log(('#email-zone').innerHTML);
+        }
+        printToDom('email-message', newString);
+        document.getElementById('read-more').addEventListener('click', printMessage);
+    }
+
 const printMessage = () => {
-    let showMoreMessageDivContent = document.getElementById('show-me-more').innerHTML;
     let removeSMButton = document.getElementById('SMButton');
-    if (showMoreMessageDivContent === '') {
         tourDatePrinter(moreTourDates);
         while (removeSMButton.hasChildNodes()) {
             removeSMButton.removeChild(removeSMButton.firstChild);
         }
-    }
 }
 
+
+// EMAIL FORM
+const printEmailForm = () => {
+    let emailString = `
+    <div>
+    <h2>STAY IN TOUCH</h2>
+    <P>Subscribe to email updates to stay up to date with news from the Tango Brigade.</P>
+    <form class="row">
+        <div class="form-group col-9">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com">
+        </div>
+        <button type="button" id="subscribe" class="col-3 btn btn-primary">SUBSCRIBE</button>
+    </form>
+    </div>
+    `
+    printToDom('email-zone', emailString);
+}
 
 // SHOW MORE BUTTON EVENT LISTENER
 //document.getElementById('show-more').addEventListener('click', printMessage);
@@ -115,27 +145,24 @@ const checkPrev = () => {
 const pageCheck = () => {
     if (currentPage.includes('tour.html')) {
         tourDatePrinter(tourDates);
-        // SHOW MORE BUTTON EVENT LISTENER
-        document.getElementById('show-more').addEventListener('click', printMessage);
         checkPrev();
+        printEmailForm();
+        document.getElementById('show-more').addEventListener('click', printMessage);
+        document.getElementById('subscribe').addEventListener('click', printNewMessage);
 
     } else if (currentPage.includes('index.html')) {
         logo.className - ' firstAnimation';
 
     } else if (currentPage.includes('about.html')) {
         checkPrev();
+        bandBuilder(bandMembers);
         
     } else if (currentPage.includes('disc.html')) {
         checkPrev();    
     }
 }
 
-// INIT
-const init = () => {
-    window.addEventListener('load', pageCheck);
-}
 
-init();
 
 
 // ABOUT PAGE MEMBER PROFILE CARDS
@@ -178,7 +205,11 @@ const bandBuilder = (bandArray) =>{
     console.log("${bandcard.name}");
     printToDom('aboutMembersZone', aboutBandCard);
 }
-bandBuilder(bandMembers);
-=======
+
+
+// INIT
+const init = () => {
+    window.addEventListener('load', pageCheck);
+}
 
 init();
