@@ -129,6 +129,11 @@ const printEmailForm = () => {
     printToDom('email-zone', emailString);
 }
 
+// DISCOGRAPHY //
+
+
+
+
 // SHOW MORE BUTTON EVENT LISTENER
 //document.getElementById('show-more').addEventListener('click', printMessage);
 
