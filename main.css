@@ -185,7 +185,7 @@ html, body {
     background-color: black;
     border: 3px white;
     flex: 0 50%;
-    box-sizing:border-box
+    box-sizing:border-box;
     flex-wrap: wrap;
 }
 .bandCard img {
@@ -302,4 +302,32 @@ html, body {
     #carousel {
         margin-top: 2em;
     }
+}
+
+/* Discography Styling */
+
+.card {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title1 {
+    text-shadow: 2px 2px black;
+    color: #cdff44;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8em;
+    padding-right: 8em;
+}
+
+.card-title {
+    color: #57c9c3;
 }
