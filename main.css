@@ -2,12 +2,39 @@ body {
     background-color: black;
     font-family: 'Ubuntu', sans-serif;
     background: url(./images/background.jpg) no-repeat center center fixed;
-    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+/* footer code */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  .wrapper {
+    min-height: 100%;
+  
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+  }
+  .footer,
+  .push {
+    height: 50px;
+  }
+
+.navbar-nav .nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    color: #57c9c3;
+}
+
+a .nav-link .active {
+    color: #cdff44;
+}
+
+/* STYLING FOR TOUR DATES */
 
 /* logo swap */
 .logo {
@@ -17,7 +44,7 @@ body {
 }
 
 .logo img.image {
-    height: 200px;
+    height: 100px;
 }
 
 .logo:hover img.image {
@@ -49,6 +76,23 @@ body {
     animation-fill-mode: forwards;
 }
 
+
+
+/* Carousel caption */
+
+.carousel-caption {
+    -webkit-text-stroke: -2px black;
+    color: #cdff44;
+    text-shadow: 2px 2px black;
+    font-family: Impact, Sans-serif;
+
+}
+
+.carousel {
+    width:640px;
+    height:360px;
+}
+
 /* ABOUT PAGE CSS */
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
@@ -64,6 +108,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: black solid 1px; 
     
 }
 
@@ -83,7 +128,7 @@ body {
     position: absolute;
     left: 37%;
     top: 25%;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: -100px;
 }
 
@@ -236,3 +281,4 @@ body {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}

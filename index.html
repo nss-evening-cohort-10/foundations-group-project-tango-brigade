@@ -12,12 +12,101 @@
 </head>
 <body>
     <div class="logo">
-        <img class="image" src="./images/tango-brigade.svg">
-        <img class="image hover" src="./images/starjets.svg">
+        <img class="image" src="./images/tango-brigade.gif">
+        <img class="image hover" src="./images/starjets.gif">
     </div>
+    <div class="container carouselDiv d-flex justify-content-center">
+        <div id="carousel" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="./about.html"><img class="d-block w-100 center" src="./images/carousel1.jpg" alt="About Us">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>About Us</h3>
+                        <p>Learn about the legends known as Tango Brigade... er... Star Jets... Tango Brigade...</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <iframe class="d-block w-100 center" width="560" height="315" src="https://www.youtube.com/embed/9e35GQ5gDl0" frameborder="0" alt="YouTube" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Listen to Us!</h3>
+                        <p>Here we are on YouTube!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="./disc.html"><img class="discoPic d-block w-100" src="./images/tango-brigade-album.jpg" alt="Discography">                    
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Discography</h3>
+                            <p>Check out our complete discography!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="./tour.html"><img class="d-block w-100" src="./images/tourPreview.jpg" alt="Tour Dates">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>We're on Tour!</h3>
+                            <p>Check out our upcoming tour dates!</p>
+                        </div>
+                    </a>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
 
-   
+<div class="wrapper"> 
+
+    <!-- put your stuff here -->
+
     <a href="about.html">About</a>
+    
+    <div class="push"></div>
+</div>
+            <footer>
+                    <nav class="navbar navbar-expand-lg" style="background-color: black">
+                            <a class="navbar-brand" href="#">
+                                <img src="/images/star-navbar.svg" width="30" height="30" class="d-inline-block align-top" alt="image of a hand-drawn star"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                          
+                            <div class="navbar" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" target="_blank" href="/index.html">Home <span class="sr-only"></span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" target="_blank" href="/tour.html">Tour</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" target="_blank" href="/disc.html">Discography</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" target="_blank" href="/about.html">About Us</a>
+                                    </li> 
+                                    <li class="nav-item" id="socials">
+                                        <a class="nav-link" target="_blank" href="https://twitter.com/hashtag/starjets?lang=en"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="nav-item" id="socials">
+                                        <a class="nav-link" target="_blank" href="https://www.facebook.com/Starjetsofficial/"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="nav-item" id="socials">
+                                        <a class="nav-link" target="_blank" href="https://www.youtube.com/embed/9e35GQ5gDl0"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    <li class="nav-item" id="socials">
+                                        <a class="nav-link" target="_blank" href="https://www.discogs.com/artist/922611-Starjets"><i class="fab fa-spotify"></i></a>
+                                    </li>    
+                                </ul>
+                          </nav>
+            </footer>
+
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
