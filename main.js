@@ -274,8 +274,7 @@ const starjetsAlbums = [
         albumYear: '1979',
         record: 'Epic',
     },
-]
-
+];
 
 
 // PAGE LOAD CHECK DO NOT PUT ANYTHING BELOW THIS
