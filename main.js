@@ -129,6 +129,10 @@ const printEmailForm = () => {
     printToDom('email-zone', emailString);
 }
 
+// SHOW MORE BUTTON EVENT LISTENER
+//document.getElementById('show-more').addEventListener('click', printMessage);
+
+
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -151,11 +155,57 @@ const pageCheck = () => {
 
     } else if (currentPage.includes('about.html')) {
         checkPrev();
+        bandBuilder(bandMembers);
         
     } else if (currentPage.includes('disc.html')) {
         checkPrev();    
     }
 }
+
+
+
+
+// ABOUT PAGE MEMBER PROFILE CARDS
+const bandMembers = [
+    {
+    image: '/images/terrysharpe.jpg',
+    name: 'Terry Sharpe',
+    instrument: 'Vocals & Guitar'
+  },
+  {
+    image: '/images/paulbowen.jpg',
+    name: 'Paul Bowen',
+    instrument: 'Guitar & Vocals'
+},
+{
+    image: '/images/seanmartin.jpg',
+    name: 'Sean Martin',
+    instrument: 'Bass Guitar'
+},{
+    image: '/images/LiamLEstrange.jpg',
+    name: "Liam L'Estrange",
+    instrument: 'Drums'
+},
+    
+]
+
+
+const bandBuilder = (bandArray) =>{
+    let aboutBandCard='';
+    for (let i=0; i < bandArray.length; i++){
+        const bandCard= bandArray[i];
+        aboutBandCard +=`
+        <div class="bandCard">
+            <h2>${bandCard.name}</h2>
+            <img src="${bandCard.image}" alt="Image of ${bandCard.name}"/>
+            <p>${bandCard.instrument}</p>
+        </div>
+        `
+    }
+    console.log("${bandcard.name}");
+    printToDom('aboutMembersZone', aboutBandCard);
+}
+
 
 // INIT
 const init = () => {
