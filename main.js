@@ -98,8 +98,6 @@ const printMessage = () => {
     }
 }
 
-// SHOW MORE BUTTON EVENT LISTENER
-document.getElementById('show-more').addEventListener('click', printMessage);
 
 
 const checkPrev = () => {
@@ -113,6 +111,8 @@ const checkPrev = () => {
 const pageCheck = () => {
     if (currentPage.includes('tour.html')) {
         tourDatePrinter(tourDates);
+        // SHOW MORE BUTTON EVENT LISTENER
+        document.getElementById('show-more').addEventListener('click', printMessage);
         checkPrev();
 
     } else if (currentPage.includes('index.html')) {
@@ -130,4 +130,5 @@ const pageCheck = () => {
 const init = () => {
     window.addEventListener('load', pageCheck);
 }
-init()
+
+init();
