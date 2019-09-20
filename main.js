@@ -87,30 +87,30 @@ const tourDatePrinter = (tourArr) => {
 };
 
 // MESSAGE TO SHOW WHEN BUTTON IS CLICKED
-const printMessage = () => {
-    let showMoreMessageDivContent = document.getElementById('show-me-more').innerHTML;
-    let removeSMButton = document.getElementById('SMButton');
-    let removeEmailForm = document.getElementById('email-zone')
+const printNewMessage = () => {
+    let removeEmailForm = document.getElementById('email-zone');
     let newString = `
     <div id="email-message">
     <h2>THANK YOU FOR SUBSCRIBING!</h2>
     <a href="/about.html" class="btn btn-primary">READ MORE</a>
     </div>
     `
-    if (showMoreMessageDivContent === '') {
+        while (removeEmailForm.hasChildNodes()) {
+            removeEmailForm.removeChild(removeEmailForm.firstChild);
+            console.log(('#email-zone').innerHTML);
+        }
+        printToDom('email-message', newString);
+        document.getElementById('read-more').addEventListener('click', printMessage);
+    }
+
+const printMessage = () => {
+    let removeSMButton = document.getElementById('SMButton');
         tourDatePrinter(moreTourDates);
         while (removeSMButton.hasChildNodes()) {
             removeSMButton.removeChild(removeSMButton.firstChild);
         }
-    } else {
-        while (removeEmailForm.hasChildNodes()) {
-        removeEmailForm.removeChild(removeEmailForm.firstChild);
-        console.log(('#email-zone').innerHTML);
-        printToDom('email-message', newString);
-        document.getElementById('read-more').addEventListener('click', printMessage);
-    }
 }
-}
+
 
 // EMAIL FORM
 const printEmailForm = () => {
@@ -148,7 +148,7 @@ const pageCheck = () => {
         checkPrev();
         printEmailForm();
         document.getElementById('show-more').addEventListener('click', printMessage);
-        document.getElementById('subscribe').addEventListener('click', printMessage);
+        document.getElementById('subscribe').addEventListener('click', printNewMessage);
 
     } else if (currentPage.includes('index.html')) {
         logo.className - ' firstAnimation';
