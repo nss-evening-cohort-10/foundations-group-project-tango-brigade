@@ -13,15 +13,15 @@ html, body {
     height: 100%;
     margin: 0;
   }
-  .wrapper {
-    min-height: 100%;
-  
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
-    margin-bottom: -50px;
-  }
-  .footer,
-  .push {
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
     height: 50px;
   }
 
@@ -44,7 +44,7 @@ a .nav-link .active {
 }
 
 .logo img.image {
-    height: 200px;
+    height: 100px;
 }
 
 .logo:hover img.image {
@@ -63,18 +63,32 @@ a .nav-link .active {
 /* logo animation */
 
 .firstAnimation {
-    justify-content: left;
     transition: 2s ease 1s;
     transform: translate(-30%, -30%) scale(.40, .40);
     animation-fill-mode: forwards;
 }
 
 .leftToRight {
-    justify-content: right;
     transition: 2s ease 1s;
     transform: translate(30%, -30%) scale(.40, .40);
     animation-fill-mode: forwards;
 }
+
+/* Carousel caption */
+
+.carousel-caption {
+    -webkit-text-stroke: -2px black;
+    color: #cdff44;
+    text-shadow: 2px 2px black;
+    font-family: Impact, Sans-serif;
+
+}
+
+.carousel {
+    width:640px;
+    height:360px;
+}
+
 
 /* ABOUT PAGE CSS */
 .bg-image {
