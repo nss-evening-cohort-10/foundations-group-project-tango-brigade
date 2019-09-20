@@ -15,7 +15,6 @@ html, body {
   }
 
 .navbar {
-    overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -30,8 +29,12 @@ html, body {
     color: #57c9c3;
 }
 
-a .nav-link .active {
-    color: #cdff44;
+.navbar a:active {
+    color: #cdff44 !important;
+}
+
+.activePage {
+    color: #cdff44 !important;
 }
 
 /* STYLING FOR TOUR DATES */
@@ -57,7 +60,6 @@ a .nav-link .active {
 
 .logo:hover img.hover {
     display: block;
-
 }
 
 /* logo animation */
@@ -186,7 +188,7 @@ a .nav-link .active {
     background-color: black;
     border: 3px white;
     flex: 0 50%;
-    box-sizing:border-box
+    box-sizing:border-box;
     flex-wrap: wrap;
 }
 .bandCard img {
@@ -297,4 +299,55 @@ a .nav-link .active {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
+
+#email-zone, #email-message {
+    margin-bottom: 150px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo img.image {
+      height: 45px;
+    }
+    
+    .navbar {
+        font-size: 11px;
+    }
+
+    #carousel {
+        margin-top: 2em;
+    }
+}
+
+/* Discography Styling */
+
+.card {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title1 {
+    text-shadow: 2px 2px black;
+    color: #cdff44;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8em;
+    padding-right: 8em;
+}
+
+.card-title {
+    color: #57c9c3;
 }
