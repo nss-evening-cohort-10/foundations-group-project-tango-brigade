@@ -124,19 +124,12 @@ const pageCheck = () => {
 
     } else if (currentPage.includes('about.html')) {
         checkPrev();
+        bandBuilder(bandMembers);
         
     } else if (currentPage.includes('disc.html')) {
         checkPrev();    
     }
 }
-
-// INIT
-const init = () => {
-    window.addEventListener('load', pageCheck);
-}
-
-init();
-
 
 // ABOUT PAGE MEMBER PROFILE CARDS
 const bandMembers = [
@@ -178,7 +171,9 @@ const bandBuilder = (bandArray) =>{
     console.log("${bandcard.name}");
     printToDom('aboutMembersZone', aboutBandCard);
 }
-bandBuilder(bandMembers);
 
+// INIT
+const init = () => {
+    window.addEventListener('load', pageCheck);
+}
 init();
-
