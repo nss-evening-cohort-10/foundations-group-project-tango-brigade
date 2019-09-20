@@ -98,9 +98,12 @@ const printMessage = () => {
     }
 }
 
-// SHOW MORE BUTTON EVENT LISTENER
-document.getElementById('show-more').addEventListener('click', printMessage);
-
+// EMAIL FORM
+const printEmailForm = () => {
+    let emailString = `
+    
+    `
+}
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -113,6 +116,7 @@ const checkPrev = () => {
 const pageCheck = () => {
     if (currentPage.includes('tour.html')) {
         tourDatePrinter(tourDates);
+        document.getElementById('show-more').addEventListener('click', printMessage); 
         checkPrev();
 
     } else if (currentPage.includes('index.html')) {
