@@ -214,8 +214,8 @@ a .nav-link .active {
     box-shadow: none;
 }
 
-#email-zone {
-    margin-bottom: 50px;
+#email-zone, #email-message {
+    margin-bottom: 150px;
     width: 400px;
     margin-right: auto;
     margin-left: auto;
