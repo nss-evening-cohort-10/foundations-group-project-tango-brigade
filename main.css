@@ -15,7 +15,6 @@ html, body {
   }
 
 .navbar {
-    overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -30,8 +29,12 @@ html, body {
     color: #57c9c3;
 }
 
-a .nav-link .active {
-    color: #cdff44;
+.navbar a:active {
+    color: #cdff44 !important;
+}
+
+.activePage {
+    color: #cdff44 !important;
 }
 
 /* STYLING FOR TOUR DATES */
@@ -277,4 +280,18 @@ a .nav-link .active {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo img.image {
+      height: 45px;
+    }
+    
+    .navbar {
+        font-size: 11px;
+    }
+
+    #carousel {
+        margin-top: 2em;
+    }
 }
