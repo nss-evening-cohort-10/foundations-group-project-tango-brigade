@@ -140,6 +140,7 @@ a .nav-link .active {
     color: white;
     margin: auto;
     padding: 50px 200px;
+    text-align: justify;
 
 }
 .aboutH3{
@@ -174,10 +175,10 @@ a .nav-link .active {
 
 }
 .bandCard{
-    margin: 10px 20px 10px 20px;
+    margin: 20px 20px 10px 20px;
     width: 100%;
-    margin-top: 40px;
-    margin-bottom: 100px;
+    margin-top: 90px;
+    margin-bottom: 90px;
     padding: 40px;
     color: white;
     text-align: center;
@@ -193,6 +194,23 @@ a .nav-link .active {
     height: 200px;
     border-radius: 50%;
 }
+
+.aboutVideosZone {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.726); /* Black w/opacity/see-through */
+}
+.aboutVideoDiv {
+    margin: 50px 100px;
+    
+}
+.aboutVideosH3{
+    padding: 40px;
+    text-align: center;
+    color: white; 
+    font size: 100px;
+}
+
+
 
 /* STYLING FOR TOUR PAGE */
 #tour-dates {
