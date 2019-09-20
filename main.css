@@ -282,12 +282,31 @@ html, body {
 }
 
 #email-zone, #email-message {
-    margin-bottom: 150px;
-    width: 400px;
+    /* width: 400px; */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     color: white;
+    font-family: futura-pt, sans-serif;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
+    color: white;
+    margin: auto;
+    padding: 40px 200px;
+}
+
+#border-nav {
+    padding: 80px 160px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
+}
+
+#show-more {
+    margin: 30px 0px 50px 0px;
+}
+
+#email-zone .btn {
+    max-height: 
 }
 
 @media only screen and (max-width: 600px) {
