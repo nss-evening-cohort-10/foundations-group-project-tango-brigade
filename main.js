@@ -111,7 +111,6 @@ const printMessage = () => {
         }
 }
 
-
 // EMAIL FORM
 const printEmailForm = () => {
     let emailString = `
@@ -162,9 +161,6 @@ const pageCheck = () => {
     }
 }
 
-
-
-
 // ABOUT PAGE MEMBER PROFILE CARDS
 const bandMembers = [
     {
@@ -206,10 +202,8 @@ const bandBuilder = (bandArray) =>{
     printToDom('aboutMembersZone', aboutBandCard);
 }
 
-
 // INIT
 const init = () => {
     window.addEventListener('load', pageCheck);
 }
-
 init();

@@ -76,6 +76,8 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+
+
 /* Carousel caption */
 
 .carousel-caption {
@@ -90,7 +92,6 @@ html, body {
     width:640px;
     height:360px;
 }
-
 
 /* ABOUT PAGE CSS */
 .bg-image {
@@ -107,6 +108,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: black solid 1px; 
     
 }
 
@@ -126,7 +128,7 @@ html, body {
     position: absolute;
     left: 37%;
     top: 25%;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: -100px;
 }
 
@@ -140,6 +142,7 @@ html, body {
     color: white;
     margin: auto;
     padding: 50px 200px;
+    text-align: justify;
 
 }
 .aboutH3{
@@ -174,10 +177,10 @@ html, body {
 
 }
 .bandCard{
-    margin: 10px 20px 10px 20px;
+    margin: 20px 20px 10px 20px;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 90px;
+    margin-bottom: 90px;
     padding: 40px;
     color: white;
     text-align: center;
@@ -193,6 +196,23 @@ html, body {
     height: 200px;
     border-radius: 50%;
 }
+
+.aboutVideosZone {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.726); /* Black w/opacity/see-through */
+}
+.aboutVideoDiv {
+    margin: 50px 100px;
+    
+}
+.aboutVideosH3{
+    padding: 40px;
+    text-align: center;
+    color: white; 
+    font size: 100px;
+}
+
+
 
 /* STYLING FOR TOUR PAGE */
 #tour-dates {
