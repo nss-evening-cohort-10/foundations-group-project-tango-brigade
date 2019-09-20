@@ -105,6 +105,7 @@ const printEmailForm = () => {
     `
 }
 
+
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
         logo.className += ' firstAnimation';
@@ -116,7 +117,8 @@ const checkPrev = () => {
 const pageCheck = () => {
     if (currentPage.includes('tour.html')) {
         tourDatePrinter(tourDates);
-        document.getElementById('show-more').addEventListener('click', printMessage); 
+        // SHOW MORE BUTTON EVENT LISTENER
+        document.getElementById('show-more').addEventListener('click', printMessage);
         checkPrev();
 
     } else if (currentPage.includes('index.html')) {
@@ -130,12 +132,9 @@ const pageCheck = () => {
     }
 }
 
-// EMAIL FORM
-
-
-
 // INIT
 const init = () => {
     window.addEventListener('load', pageCheck);
 }
-init()
+
+init();
