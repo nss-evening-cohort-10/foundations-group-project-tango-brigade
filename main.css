@@ -76,6 +76,8 @@ html, body {
     animation-fill-mode: forwards;
 }
 
+
+
 /* Carousel caption */
 
 .carousel-caption {
@@ -90,7 +92,6 @@ html, body {
     width:640px;
     height:360px;
 }
-
 
 /* ABOUT PAGE CSS */
 .bg-image {
@@ -107,6 +108,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: black solid 1px; 
     
 }
 
@@ -126,7 +128,7 @@ html, body {
     position: absolute;
     left: 37%;
     top: 25%;
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: -100px;
 }
 
@@ -140,6 +142,7 @@ html, body {
     color: white;
     margin: auto;
     padding: 50px 200px;
+    text-align: justify;
 
 }
 .aboutH3{
@@ -174,10 +177,10 @@ html, body {
 
 }
 .bandCard{
-    margin: 10px 20px 10px 20px;
+    margin: 20px 20px 10px 20px;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 90px;
+    margin-bottom: 90px;
     padding: 40px;
     color: white;
     text-align: center;
@@ -193,6 +196,23 @@ html, body {
     height: 200px;
     border-radius: 50%;
 }
+
+.aboutVideosZone {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.726); /* Black w/opacity/see-through */
+}
+.aboutVideoDiv {
+    margin: 50px 100px;
+    
+}
+.aboutVideosH3{
+    padding: 40px;
+    text-align: center;
+    color: white; 
+    font-size: 100px;
+}
+
+
 
 /* STYLING FOR TOUR PAGE */
 #tour-dates {
@@ -282,12 +302,32 @@ html, body {
 }
 
 #email-zone, #email-message {
-    margin-bottom: 150px;
-    width: 400px;
+    /* width: 400px; */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     color: white;
+    font-family: futura-pt, sans-serif;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
+    color: white;
+    margin: auto;
+    padding: 40px 200px;
+}
+
+#border-nav {
+    padding: 80px 160px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
+}
+
+#show-more {
+    margin: 30px 0px 50px 0px;
+}
+
+#email-zone .btn {
+    max-height: 38px;
+    padding: 10px 24px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -306,15 +346,17 @@ html, body {
 
 /* Discography Styling */
 
-.card {
+#songGrid {
     background-color: rgba(0, 0, 0, 0.75);
     color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
+    max-height: 100px;
+    margin: 1em;
 }
 
-.container  {
+.singles-container  {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -328,6 +370,20 @@ html, body {
     padding-right: 8em;
 }
 
-.card-title {
+#songTitle {
     color: #57c9c3;
+    justify-content: center;
+}
+
+.disc-card-img {
+    max-height: 100px;
+}
+
+#stats {
+    justify-content: flex-end;
+}
+
+#starJetsAlbum {
+    display: flex;
+    flex-direction: row;
 }
