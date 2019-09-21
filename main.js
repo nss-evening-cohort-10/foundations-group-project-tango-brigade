@@ -323,24 +323,36 @@ const starjetsAlbums = [
         albumTitle: 'God Bless Starjets: The Punk Collection',
         albumYear: '1999',
         record: 'Epic',
+        songs: [
+            "Smash It Up", "Suspect Device", "Black & Red", "Space Age", "Scream"
+        ],
     },
     {
         albumArt: 'https://img.discogs.com/LQjx89380Xp-Ok74uhxtZsz9opA=/fit-in/600x584/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-10949196-1522281917-2768.jpeg.jpg',
         albumTitle: 'The 1979 Belfast Demo Session Volume II',
         albumYear: '1979, 2018',
         record: 'Spit Records',
+        songs: [
+            "In The Pit", "My Love", "Battle In The Heart/Mind", "Walk In Ramsey Street", "I'm In Trouble"
+        ],
     },
     {
         albumArt: 'https://img.discogs.com/y0Q_1EcsP9x08RjQZPn33GhN0DM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-10637314-1521049514-9146.jpeg.jpg',
         albumTitle: 'The 1979 Belfast Demo Session Volume I',
         albumYear: '1979, 2018',
         record: 'Spit Records',
+        songs: [
+            "You're So Physical", "Sexbomb", "On The Run", "Neat Neat Neat", "The Dammed"
+        ],
     },
     {
         albumArt: 'https://img.discogs.com/KEAhNtDSz7x6xJcVgiuimJFG5Ng=/fit-in/600x605/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1321394-1564910928-8348.jpeg.jpg',
         albumTitle: 'God Bless Starjets',
         albumYear: '1979',
         record: 'Epic',
+        songs: [
+            "Let's Loot The Supermarket", "Dead Meat Part II", "Whatcha Gonna Do", "Where Were You?", "On My Own"
+        ],
     },
 ];
 
@@ -356,7 +368,7 @@ const cardPrinter = (songArray) => {
         </div>
         <div class="col-6" id="title">
             <div class="row"><h4 id="songTitle">${songs.title}</h4></div>
-            <div class="row"><p>${songs.year}</p></div>
+            <div class="row" id="year"><p>${songs.year}</p></div>
         </div>
         <div class="col" id="stats">
             <div class="row"><p>${songs.genre}</p></div>
@@ -383,8 +395,13 @@ const albumBuilder = (albumArray) => {
         <img class="card-img-top" src="${albums.albumArt}" alt="album image">
         <div class="card-body">
             <h6 id="albumTitle">${albums.albumTitle}</h6>
-            <p class="card-text">${albums.albumYear}</p>
-        </div>
+            <p class="year-text">${albums.albumYear}</p>
+            <p class="song-text">${albums.songs[0]}</p>
+            <p class="song-text">${albums.songs[1]}</p>
+            <p class="song-text">${albums.songs[2]}</p>
+            <p class="song-text">${albums.songs[3]}</p>
+            <p class="song-text">${albums.songs[4]}</p>
+            </div>
       </div>`
     }
     printToDom('starJetsAlbum', domString);

@@ -353,7 +353,7 @@ html, body {
 .album-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .album-card {
@@ -402,6 +402,10 @@ html, body {
     justify-content: flex-end;
 }
 
+#year {
+    color: #cdff44;
+}
+
 #starJetsAlbum {
     display: flex;
     flex-direction: row;
@@ -412,6 +416,13 @@ html, body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.year-text {
+    color: #57c9c3;
+}
+
+.song-text {
+    font-size: 12px;
+}
 /*copyright styling */
 
 .copyright {
