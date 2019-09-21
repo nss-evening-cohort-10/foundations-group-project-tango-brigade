@@ -318,10 +318,10 @@ const albumBuilder = (albumArray) => {
     let domString = ''
     for (let i = 0; i < albumArray.length; i++) {
         const albums = albumArray[i];
-        domString += `<div class="card" style="width: 18rem;">
+        domString += `<div class="album-card" style="width: 18rem;">
         <img class="card-img-top" src="${albums.albumArt}" alt="album image">
         <div class="card-body">
-            <h5>${albums.albumTitle}</h5>
+            <h6 id="albumTitle">${albums.albumTitle}</h6>
             <p class="card-text">${albums.albumYear}</p>
         </div>
       </div>`
