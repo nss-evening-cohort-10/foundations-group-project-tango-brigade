@@ -399,10 +399,6 @@ const pageCheck = () => {
         document.getElementById('show-more').addEventListener('click', printMessage);
         document.getElementById('subscribe').addEventListener('click', printNewMessage);
 
-    } else if (currentPage.includes('index.html')) {
-        logo.className - ' firstAnimation';
-        merchBuilder(merchPromo);
-
     } else if (currentPage.includes('about.html')) {
         checkPrev();
         bandBuilder(bandMembers);
@@ -412,6 +408,10 @@ const pageCheck = () => {
         cardPrinter(tangoSingles);
         albumBuilder(starjetsAlbums);
         cardPrinter(starjetsSingles);
+    } else {
+        logo.className - ' firstAnimation';
+        merchBuilder(merchPromo);
+
     }
 }
 
