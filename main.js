@@ -92,15 +92,19 @@ const printNewMessage = () => {
     let newString = `
     <div id="email-message">
     <h2>THANK YOU FOR SUBSCRIBING!</h2>
-    <a href="/about.html" class="btn btn-primary">READ MORE</a>
+    <button type="button" id="read-more" class="col-3 btn btn-primary">READ MORE</button>
     </div>
     `
-        while (removeEmailForm.hasChildNodes()) {
-            removeEmailForm.removeChild(removeEmailForm.firstChild);
-            console.log(('#email-zone').innerHTML);
+    if (document.getElementById('exampleInputEmail1').value === '') {
+            alert('Please enter an email!');
+        } else {
+            while (removeEmailForm.hasChildNodes()) {
+                removeEmailForm.removeChild(removeEmailForm.firstChild);
+            }
+            printToDom('email-message', newString);
+            document.getElementById('read-more').addEventListener('click', () => {
+                location.replace("/about.html");});
         }
-        printToDom('email-message', newString);
-        document.getElementById('read-more').addEventListener('click', printMessage);
     }
 
 const printMessage = () => {
@@ -127,11 +131,6 @@ const printEmailForm = () => {
     `
     printToDom('email-zone', emailString);
 }
-
-// SHOW MORE BUTTON EVENT LISTENER
-//document.getElementById('show-more').addEventListener('click', printMessage);
-
-
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -177,7 +176,6 @@ const bandBuilder = (bandArray) =>{
         </div>
         `
     }
-    console.log("${bandcard.name}");
     printToDom('aboutMembersZone', aboutBandCard);
 }
 
@@ -311,8 +309,6 @@ const cardPrinter = (songArray) => {
     
 }
 
-cardPrinter(tangoSingles);
-cardPrinter(starjetsSingles);
 
 const albumBuilder = (albumArray) => {
     let domString = ''
@@ -328,8 +324,6 @@ const albumBuilder = (albumArray) => {
     }
     printToDom('starJetsAlbum', domString);
 }
-
-albumBuilder(starjetsAlbums);
 
 // PAGE LOAD CHECK DO NOT PUT ANYTHING BELOW THIS
 const pageCheck = () => {
@@ -349,6 +343,9 @@ const pageCheck = () => {
         
     } else if (currentPage.includes('disc.html')) {
         checkPrev();    
+        cardPrinter(tangoSingles);
+        albumBuilder(starjetsAlbums);
+        cardPrinter(starjetsSingles);
     }
 }
 

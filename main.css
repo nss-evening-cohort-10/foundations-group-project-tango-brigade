@@ -302,7 +302,6 @@ html, body {
 }
 
 #email-zone, #email-message {
-    /* width: 400px; */
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -437,4 +436,11 @@ html, body {
     #stats {
         font-size: 11px;
     }
+/*copyright styling */
+
+.copyright {
+    color: #57c9c3;
+    margin: .5em;
+}
+
 }
