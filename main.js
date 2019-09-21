@@ -128,6 +128,10 @@ const printEmailForm = () => {
     printToDom('email-zone', emailString);
 }
 
+// SHOW MORE BUTTON EVENT LISTENER
+//document.getElementById('show-more').addEventListener('click', printMessage);
+
+
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -177,6 +181,7 @@ const bandBuilder = (bandArray) =>{
     printToDom('aboutMembersZone', aboutBandCard);
 }
 
+// DISCOGRAPHY //
 
 // DISC PAGE ARRAYS
 const tangoSingles = [
@@ -276,6 +281,55 @@ const starjetsAlbums = [
     },
 ];
 
+const cardPrinter = (songArray) => {
+    let stringToPrint = ''
+    for (let i = 0; i < songArray.length; i++) {
+        const songs = songArray[i];
+        stringToPrint +=`
+        <div class="container" id="songGrid">
+    <div class="row">
+        <div class="col-3" id="image">
+            <img class="disc-card-img" src="${songs.albumArt}">
+        </div>
+        <div class="col-6" id="title">
+            <div class="row"><h4 id="songTitle">${songs.title}</h4></div>
+            <div class="row"><p>${songs.year}</p></div>
+        </div>
+        <div class="col" id="stats">
+            <div class="row"><p>${songs.genre}</p></div>
+            <div class="row"><p>${songs.style}</p></div>
+            <div class="row"><p>${songs.length}</p></div>
+        </div>
+    </div>
+</div>`
+    }
+    if (songArray === tangoSingles) {
+        printToDom('tangoBrigadeSingles', stringToPrint);
+    } else if (songArray === starjetsSingles) {
+        printToDom('starJetsSingles', stringToPrint);
+    }
+    
+}
+
+cardPrinter(tangoSingles);
+cardPrinter(starjetsSingles);
+
+const albumBuilder = (albumArray) => {
+    let domString = ''
+    for (let i = 0; i < albumArray.length; i++) {
+        const albums = albumArray[i];
+        domString += `<div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="${albums.albumArt}" alt="album image">
+        <div class="card-body">
+            <h5>${albums.albumTitle}</h5>
+            <p class="card-text">${albums.albumYear}</p>
+        </div>
+      </div>`
+    }
+    printToDom('starJetsAlbum', domString);
+}
+
+albumBuilder(starjetsAlbums);
 
 // PAGE LOAD CHECK DO NOT PUT ANYTHING BELOW THIS
 const pageCheck = () => {

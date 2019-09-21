@@ -346,15 +346,17 @@ html, body {
 
 /* Discography Styling */
 
-.singles-card {
+#songGrid {
     background-color: rgba(0, 0, 0, 0.75);
     color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
+    max-height: 100px;
+    margin: 1em;
 }
 
 .singles-container  {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -368,6 +370,20 @@ html, body {
     padding-right: 8em;
 }
 
-.card-title {
+#songTitle {
     color: #57c9c3;
+    justify-content: center;
+}
+
+.disc-card-img {
+    max-height: 100px;
+}
+
+#stats {
+    justify-content: flex-end;
+}
+
+#starJetsAlbum {
+    display: flex;
+    flex-direction: row;
 }
