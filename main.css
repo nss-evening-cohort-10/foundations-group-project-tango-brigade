@@ -80,12 +80,16 @@ html, body {
 
 /* Carousel caption */
 
-.carousel-caption {
+.carousel-caption, .comingSoon {
     -webkit-text-stroke: -2px black;
     color: #cdff44;
     text-shadow: 2px 2px black;
     font-family: Impact, Sans-serif;
 
+}
+
+.comingSoon {
+    margin-top: 2em;
 }
 
 .carousel {
@@ -408,6 +412,32 @@ html, body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+/*copyright styling */
+
+.copyright {
+    color: #57c9c3;
+    margin: .5em;
+}
+
+/* merch styling */
+
+.merchCard {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1em;
+}
+
+.merchCard img {
+    width: 200px;
+    margin: 2em;
+}
+
+.merchCard h4 {
+    color: #57c9c3;
+
+}
+
 @media only screen and (max-width: 600px) {
     .logo img.image {
       height: 45px;
@@ -436,11 +466,4 @@ html, body {
     #stats {
         font-size: 11px;
     }
-/*copyright styling */
-
-.copyright {
-    color: #57c9c3;
-    margin: .5em;
-}
-
 }
