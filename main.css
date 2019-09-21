@@ -386,3 +386,10 @@ html, body {
     display: flex;
     flex-direction: row;
 }
+
+/*copyright styling */
+
+.copyright {
+    color: #57c9c3;
+    margin: .5em;
+}
