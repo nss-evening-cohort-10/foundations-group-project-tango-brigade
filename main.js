@@ -2,6 +2,43 @@
 const logo = document.getElementsByClassName('logo')[0];
 let currentPage = document.URL;
 
+//PROMO ARRAY
+
+const merchPromo = [
+    {
+        name: 'Angry Young and Punk',
+        type: 'T-Shirt',
+        sizes: 'XS, S, M, L, XL',
+        color: 'Black',
+        img: './images/shirt1.jpg',
+        available: 'Coming Soon'
+    },
+    {
+        name: 'Punks Not Dead',
+        type: 'T-Shirt',
+        sizes: 'XS, S, M, L, XL',
+        color: 'Black',
+        img: './images/shirt2.jpg',
+        available: 'Coming Soon'
+    },
+    {
+        name: 'Punk Hoodie',
+        type: 'Hoodie',
+        sizes: 'XS, S, M, L, XL',
+        color: 'Black',
+        img: './images/shirt3.jpg',
+        available: 'Coming Soon'
+    },
+    {
+        name: 'Future of Punk',
+        type: 'Hoodie',
+        sizes: 'Child S, M, L',
+        color: 'Black',
+        img: './images/shirt4.jpg',
+        available: 'Coming Soon'
+    }
+]
+
 // TOUR DATES ARRAYS
 tourDates = [
     {
@@ -131,6 +168,34 @@ const printEmailForm = () => {
     `
     printToDom('email-zone', emailString);
 }
+
+//MERCH LOOP
+
+const merchBuilder = (merchArray) => {
+    let merchString = `
+    <div class="row justify-content-center">
+    `
+    for (let i =0; i < merchArray.length; i++) {
+        const merchCard = merchArray[i];
+        merchString += `
+            <div class="card merchCard col-sm-4 d-flex justify-text-center">
+                <div class="text-center">
+                <img src="${merchCard.img}" class="card-img-top" alt="${merchCard.name}"></div>
+                <div class="card-body">
+                    <h4>${merchCard.name}</h4>
+                    <p><strong>Type:</strong> ${merchCard.type}</p>
+                    <p><strong>Sizes:</strong> ${merchCard.sizes}</p>
+                    <p><strong>Color:</strong> ${merchCard.color}</p>
+                    <p><strong>Availability:</strong> ${merchCard.available}</p>
+                </div>
+            </div>
+        `;
+    }
+    merchString += '</div>';
+    printToDom('merchZone', merchString);
+};
+
+// CHECK PREVIOUS PAGE LOCATION AND ANIMATE
 
 const checkPrev = () => {
     if (document.referrer.includes('index.html')) {
@@ -351,9 +416,6 @@ const pageCheck = () => {
         document.getElementById('show-more').addEventListener('click', printMessage);
         document.getElementById('subscribe').addEventListener('click', printNewMessage);
 
-    } else if (currentPage.includes('index.html')) {
-        logo.className - ' firstAnimation';
-
     } else if (currentPage.includes('about.html')) {
         checkPrev();
         bandBuilder(bandMembers);
@@ -363,6 +425,10 @@ const pageCheck = () => {
         cardPrinter(tangoSingles);
         albumBuilder(starjetsAlbums);
         cardPrinter(starjetsSingles);
+    } else {
+        logo.className - ' firstAnimation';
+        merchBuilder(merchPromo);
+
     }
 }
 
