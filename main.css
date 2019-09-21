@@ -329,20 +329,6 @@ html, body {
     padding: 10px 24px;
 }
 
-@media only screen and (max-width: 600px) {
-    .logo img.image {
-      height: 45px;
-    }
-    
-    .navbar {
-        font-size: 11px;
-    }
-
-    #carousel {
-        margin-top: 2em;
-    }
-}
-
 /* Discography Styling */
 
 #songGrid {
@@ -353,10 +339,24 @@ html, body {
     margin: 1em;
 }
 
-.singles-container  {
+.singles-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.album-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1em;
 }
 
 #title1 {
@@ -364,9 +364,25 @@ html, body {
     color: #cdff44;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 8em;
-    padding-right: 8em;
+    margin-left: 8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#title2 {
+    text-shadow: 2px 2px black;
+    color: #57c9c3;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    margin-left: 8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 #songTitle {
@@ -387,9 +403,44 @@ html, body {
     flex-direction: row;
 }
 
+#albumTitle {
+    color: #cdff44;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo img.image {
+      height: 45px;
+    }
+    
+    .navbar {
+        font-size: 11px;
+    }
+
+    #carousel {
+        margin-top: 2em;
+    }
+
+    #songTitle {
+        font-size: 18px;
+    }
+
+    #albumTitle{
+        font-size: 18px;
+    }
+
+    #title{
+        align-items: flex-end;
+    }
+
+    #stats {
+        font-size: 11px;
+    }
 /*copyright styling */
 
 .copyright {
     color: #57c9c3;
     margin: .5em;
+}
+
 }
