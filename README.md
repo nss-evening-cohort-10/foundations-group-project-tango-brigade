@@ -5,7 +5,11 @@ A website for the band Tango Brigade, who is also the Star Jets.
 
 ## Screenshots
 
-
+## Technologies used
+* Bootstrap
+* CSS
+* JavaScript
+* HTML5
 
 ## How to run
 * Clone down this project
