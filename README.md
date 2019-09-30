@@ -4,6 +4,10 @@
 A website for the band Tango Brigade, who is also the Star Jets. 
 
 ## Screenshots
+![Main View](https://github.com/nss-evening-cohort-10/foundations-group-project-tango-brigade/raw/master/screenshots/mainview.PNG)
+![Tour View](https://github.com/nss-evening-cohort-10/foundations-group-project-tango-brigade/raw/master/screenshots/tourview.PNG)
+![Discography View](https://github.com/nss-evening-cohort-10/foundations-group-project-tango-brigade/raw/master/screenshots/discoview.PNG)
+![About View](https://github.com/nss-evening-cohort-10/foundations-group-project-tango-brigade/raw/master/screenshots/aboutview.PNG)
 
 ## Technologies used
 * Bootstrap
